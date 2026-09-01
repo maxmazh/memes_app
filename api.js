@@ -1,6 +1,6 @@
 class API {
     constructor() {
-        this.baseURL = 'https://api.imgflip.com/';
+        this.baseURL = 'https://api.imgflip.com';
     }
 
     fetchMemes() {

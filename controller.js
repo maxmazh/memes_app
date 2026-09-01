@@ -16,11 +16,11 @@ class Controller {
             })
     }
 
-    handleModelMemesChanged = (memes) => {
-        this.view.render(memes);
+    handleModelMemesChanged = (meme) => {
+        this.view.render(meme);
     }
 
-    handleViewNewMemes = (url, name) => {
-        this.model.addMemes(url, name);
+    handleViewNewMemes = (name) => {
+        this.model.getMemes(name);
     }
 }

@@ -1,6 +1,7 @@
 class Model {
     constructor({onMemesChanged}) {
         this.memes = [];
+        this.oneMeme = null;
         // this.isError = true;
         this.onMemesChanged = onMemesChanged;
     }
@@ -10,14 +11,24 @@ class Model {
             url,
             name
         });
-        
-        this.onMemesChanged(this.memes);
+        // this.onMemesChanged(this.memes);
     }
 
     setMemes(memes) {
         this.memes = memes;
+        // this.onMemesChanged(this.memes);
+    }
 
-        this.onMemesChanged(this.memes);
+    getMemes(name) {
+        const meme = this.memes.find(m => 
+            m.name.toLowerCase() === name.toLowerCase()
+        );
+
+        this.oneMeme = meme;
+        
+        this.onMemesChanged(this.oneMeme);
+
+        return meme;
     }
 
     // _isMemesValid() {
