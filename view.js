@@ -15,11 +15,9 @@ class View {
             this.imgMemes.innerHTML = `<p>Мем не найден</p>`;
             return;
         }
-            this.imgMemes.innerHTML = `
-            <div>
-                <img src="${oneMeme.url}">
-                <p>${oneMeme.name}</p>
-            </div>`;
+
+        this.imgMemes.src = oneMeme.url;
+        this.nameMemes.textContent = oneMeme.name;
     }
 
     _handleBtnClick = () => {
