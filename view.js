@@ -9,6 +9,7 @@ class View {
         this.onNewMeme = onNewMeme;
 
         this.btnNode.addEventListener('click', this._handleBtnClick);
+        this.settingSelectNode.addEventListener('change', this._handleSelectChange);
     }
 
     render(oneMeme) {
@@ -43,6 +44,12 @@ class View {
         if (!name) {
             return;
         }
+
+        this.onNewMeme(name);
+    }
+
+    _handleSelectChange = (event) => {
+        const name = event.target.value;
 
         this.onNewMeme(name);
     }

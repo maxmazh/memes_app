@@ -14,6 +14,8 @@ class Controller {
             .then(memes => {
                 this.model.setMemes(memes);
                 this.view.renderMemesSelect(memes);
+
+                this.model.getMemes(memes[0].name);
             })
     }
 
