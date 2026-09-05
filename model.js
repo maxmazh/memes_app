@@ -16,6 +16,7 @@ class Model {
 
     setMemes(memes) {
         this.memes = memes;
+        // this.oneMeme = memes[0].name;
         // this.onMemesChanged(this.memes);
     }
 

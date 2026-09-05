@@ -13,6 +13,7 @@ class Controller {
         this.api.fetchMemes()
             .then(memes => {
                 this.model.setMemes(memes);
+                this.view.renderMemesSelect(memes);
             })
     }
 
